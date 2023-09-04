@@ -1,0 +1,13 @@
+.footer__main{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--footer-bg-color);
+    padding: 1.5rem;
+
+}
+@media screen and (min-width: 998px) {
+    .footer__main{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

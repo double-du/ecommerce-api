@@ -1,0 +1,13 @@
+.menu{
+    display: flex;
+    gap: 1rem;
+}
+.menu--header{
+    flex-direction: row;
+    justify-content: right;
+}
+
+.menu--footer{
+    flex-direction: column;
+    justify-content: left;
+}

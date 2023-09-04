@@ -1,0 +1,11 @@
+.produto_thumb__image{
+    object-fit: cover;
+    height: 350px;
+    border-radius: 10px;
+}
+
+@media screen and (min-width: 998px) {
+    .produto_thumb__image{
+        max-width: 50%;
+    }
+}

@@ -1,0 +1,22 @@
+.produto_thumb{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem 0 2rem;
+}
+
+@media screen and (min-width: 998px) {
+    .produto_thumb{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .produto_thumb--reverso{
+        flex-direction: row-reverse;
+    }
+    .produto_thumb--reverso > *{
+        text-align: right;
+    }
+}

@@ -1,0 +1,12 @@
+.produto__link{
+    display: inline-block;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: var(--main-color);
+    font-weight: 500;
+    color: #fff;
+}
+.produto__link:hover{
+    cursor: pointer;
+}

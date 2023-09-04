@@ -1,0 +1,11 @@
+.destaques__list{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+@media screen and (min-width: 998px) {
+    .destaques__list{
+        flex-direction: row;
+    }    
+}

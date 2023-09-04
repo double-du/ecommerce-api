@@ -1,0 +1,28 @@
+.destaque__card{
+    border-radius: 10px;
+    background-color: rgba(0,0,0,1);
+    background-position: center left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 0;
+    color: transparent;
+    transition: box-shadow ease .25s;
+}
+
+.destaque__card:hover{
+    cursor: pointer;
+    box-shadow: 0 0 90px 60px rgba(0,0,0,.8) inset;
+}
+
+.destaque__card:hover h3{
+    transition: color ease .25s, text-shadow ease .25s;
+}
+.destaque__card:hover h3{
+    color: #fff;
+    /* text-shadow: 0 0 10px rgba(0,0,0,.9) ; */
+}

@@ -1,0 +1,12 @@
+.produto__preco{
+    font-size: 2rem;
+    font-weight: 800;
+}
+.produto__preco--moeda{
+    vertical-align: top;
+    font-size: .8rem;
+}
+.produto__preco--centavos{
+    vertical-align: bottom;
+    font-size: .8rem;
+}
