@@ -2,14 +2,19 @@ import Produto from "../../interfaces/Produto";
 
 import './assets/css/produto-thumb.css';
 import './assets/css/produto-thumb-image.css';
+import './assets/css/produto-thumb-favoritar.css';
+import './assets/css/produto-thumb-dados.css';
 import './assets/css/produto-thumb-descricao.css';
 import './assets/css/produto-thumb-titulo.css';
 import './assets/css/produto-thumb-preco.css';
 import './assets/css/produto-thumb-preco-original.css';
 import './assets/css/produto-thumb-preco-final.css';
 import './assets/css/produto-link.css';
+import './assets/css/produto-thumb-buttons.css';
 
-import { Link, useNavigate } from "react-router-dom";
+
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface ProdutoProps {
     produto: Produto
@@ -23,11 +28,17 @@ const ProdutoThumb = ({produto}: ProdutoProps)=> {
         }`}>
             <img className="produto_thumb__image" src={`${produto.images[0]}`} alt="" />
             <div className="produto_thumb__dados">
+                <span className="produto__favoritar">
+                    <span className="produto__favoritar"></span>
+                </span>
                 <h4 className="produto_thumb__titulo">{produto.title}</h4>
                 <p className="produto_thumb__descricao">{produto.description}</p>
                 <p className="produto_thumb__preco_original"><s>{produto.price}</s></p>
                 <p className="produto_thumb__preco_final">{produto.finalPrice.toFixed(2)}</p>
-                <Link to={`produto/${produto.id}`} className="produto__link">Ver Produto</Link>
+                <div className="produto_thumb__buttons">
+                    <Link to={`produto/${produto.id}`} className="produto__link produto__link--destaque">Adicionar ao Carrinho </Link>
+                    <Link to={`produto/${produto.id}`} className="produto__link">Ver Produto</Link>
+                </div>
             </div>
         </div>
     </>);
