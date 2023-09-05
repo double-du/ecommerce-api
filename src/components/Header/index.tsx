@@ -8,7 +8,7 @@ const Header = () => {
             <div className="nav__logo">
                 
             </div>
-            <div className="nav__menu">
+            <div className="nav__menu container">
                 <Menu
                     type="header"
                 />

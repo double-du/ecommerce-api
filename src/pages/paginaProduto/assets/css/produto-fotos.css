@@ -1,0 +1,5 @@
+@media screen and (min-width: 998px) {
+    .produto__fotos{
+        width: 35%;
+    }
+}

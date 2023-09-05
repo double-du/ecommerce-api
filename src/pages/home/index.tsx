@@ -3,12 +3,8 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 import Produto from '../../interfaces/Produto';
-import ProdutoDestaque from '../../components/ProdutoDestaque';
 import ProdutoThumb from '../../components/ProdutoThumb';
 
-// import './assets/css/destaques.css'
-// import './assets/css/destaques-title.css'
-// import './assets/css/destaques-list.css'
 import './assets/css/produtos-lista.css'
 import './assets/css/produtos-titulo.css'
 

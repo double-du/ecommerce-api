@@ -1,0 +1,5 @@
+.imagens__galeria{
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+}

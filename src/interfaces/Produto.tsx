@@ -1,3 +1,5 @@
+export type ProdutoImagem = string
+
 export default interface Produto {
     id: number
     title: string
@@ -5,5 +7,5 @@ export default interface Produto {
     description: string
     price: number
     thumbnail: string
-    images: Array<number>
+    images: ProdutoImagem[]
 }

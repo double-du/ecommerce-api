@@ -1,0 +1,10 @@
+.produto__marca::before{
+    content: 'marca: ';
+    display: block;
+    font-style: italic;
+    font-size: .75rem;
+    margin-bottom: .15rem;
+}
+.produto__marca{
+    display: block;
+}

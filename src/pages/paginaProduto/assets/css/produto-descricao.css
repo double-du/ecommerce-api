@@ -1,0 +1,10 @@
+.produto__descricao::before{
+    content: 'descrição:';
+    display: block;
+    font-style: italic;
+    font-size: .75rem;
+    margin-bottom: .15rem;
+}
+.produto__descricao{
+    line-height: 1.8;
+}

@@ -7,6 +7,22 @@
     justify-content: right;
 }
 
+.menu--header a{
+    display: block;
+    text-decoration: none;
+    color: var(--main-color);
+    padding: .5rem;
+    border-radius: 10px;
+    background-color: transparent;
+    transition: background-color ease .25s, color ease .25s;
+}
+
+.menu--header a:hover{
+    background-color: var(--main-color);
+    color: var(--main-color-text);
+
+}
+
 .menu--footer{
     flex-direction: column;
     justify-content: left;
