@@ -6,6 +6,7 @@ export default interface Produto {
     brand: string
     description: string
     price: number
+    discountPercentage: number
     thumbnail: string
     images: ProdutoImagem[]
 }

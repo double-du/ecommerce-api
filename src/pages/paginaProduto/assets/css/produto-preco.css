@@ -1,0 +1,17 @@
+.produto__preco{
+    font-weight: 800;
+    font-size: 2.8rem;
+}
+
+.produto__preco::before{
+    content: 'R$ ';
+    font-size: 1rem;
+    vertical-align: text-top;
+}
+
+.produto__preco::after{
+    content: ',00';
+    font-size: 1rem;
+    vertical-align: text-bottom;
+    font-weight: 600;
+}

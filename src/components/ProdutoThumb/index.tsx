@@ -5,6 +5,8 @@ import './assets/css/produto-thumb-image.css';
 import './assets/css/produto-thumb-descricao.css';
 import './assets/css/produto-thumb-titulo.css';
 import './assets/css/produto-thumb-preco.css';
+import './assets/css/produto-thumb-preco-original.css';
+import './assets/css/produto-thumb-preco-final.css';
 import './assets/css/produto-link.css';
 
 import { Link, useNavigate } from "react-router-dom";
@@ -22,7 +24,8 @@ const ProdutoThumb = ({produto}: ProdutoProps)=> {
             <div className="produto_thumb__dados">
                 <h4 className="produto_thumb__titulo">{produto.title}</h4>
                 <p className="produto_thumb__descricao">{produto.description}</p>
-                <p className="produto_thumb__preco"><span className="produto__preco--moeda">R$</span> {produto.price}<span className="produto__preco--centavos">,00</span></p>
+                <p className="produto_thumb__preco_original"><s>{produto.price}</s></p>
+                <p className="produto_thumb__preco_final">{(produto.price - (produto.price * produto.discountPercentage) / 100).toFixed(2)}</p>
                 <Link to={`produto/${produto.id}`} className="produto__link">Ver Produto</Link>
             </div>
         </div>
