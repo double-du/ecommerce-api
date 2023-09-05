@@ -11,6 +11,7 @@ import './assets/css/produto-thumb-preco-original.css';
 import './assets/css/produto-thumb-preco-final.css';
 import './assets/css/produto-link.css';
 import './assets/css/produto-thumb-buttons.css';
+import './assets/css/icones.css';
 
 
 import { Link } from "react-router-dom";
@@ -29,7 +30,7 @@ const ProdutoThumb = ({produto}: ProdutoProps)=> {
             <img className="produto_thumb__image" src={`${produto.images[0]}`} alt="" />
             <div className="produto_thumb__dados">
                 <span className="produto__favoritar">
-                    <span className="produto__favoritar"></span>
+                    <span className="icone--coracao_vazio"></span>
                 </span>
                 <h4 className="produto_thumb__titulo">{produto.title}</h4>
                 <p className="produto_thumb__descricao">{produto.description}</p>
