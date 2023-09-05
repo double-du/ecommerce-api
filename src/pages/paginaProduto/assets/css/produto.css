@@ -1,0 +1,10 @@
+.produto{
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 998) {
+    .produto{
+        flex-direction: row;
+    }
+}

@@ -7,7 +7,7 @@ import './assets/css/produto-thumb-titulo.css';
 import './assets/css/produto-preco.css';
 import './assets/css/produto-link.css';
 
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 interface ProdutoProps {
     produto: Produto
@@ -30,9 +30,7 @@ const ProdutoThumb = ({produto}: ProdutoProps)=> {
                 <h4 className="produto__titulo">{produto.title}</h4>
                 <p className="produto_thumb__descricao">{produto.description}</p>
                 <p className="produto__preco"><span className="produto__preco--moeda">R$</span> {produto.price}<span className="produto__preco--centavos">,00</span></p>
-                <a onClick={ 
-                    () => {redirecionaParaProduto(produto)}
-                } className="produto__link">Ver Produto</a>
+                <Link to={`produto/${produto.id}`} className="produto__link">Ver Produto</Link>
             </div>
         </div>
     </>);
