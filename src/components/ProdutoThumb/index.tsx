@@ -16,6 +16,7 @@ interface ProdutoProps {
 }
 
 const ProdutoThumb = ({produto}: ProdutoProps)=> {
+    produto.finalPrice = produto.price - (produto.price * produto.discountPercentage) / 100;
     return (<>
         <div className={`produto_thumb ${
             produto.id % 2 === 0 ? 'produto_thumb--reverso' : ''
@@ -25,7 +26,7 @@ const ProdutoThumb = ({produto}: ProdutoProps)=> {
                 <h4 className="produto_thumb__titulo">{produto.title}</h4>
                 <p className="produto_thumb__descricao">{produto.description}</p>
                 <p className="produto_thumb__preco_original"><s>{produto.price}</s></p>
-                <p className="produto_thumb__preco_final">{(produto.price - (produto.price * produto.discountPercentage) / 100).toFixed(2)}</p>
+                <p className="produto_thumb__preco_final">{produto.finalPrice.toFixed(2)}</p>
                 <Link to={`produto/${produto.id}`} className="produto__link">Ver Produto</Link>
             </div>
         </div>
