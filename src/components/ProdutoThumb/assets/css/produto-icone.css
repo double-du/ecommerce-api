@@ -1,0 +1,15 @@
+.produto__icone{
+    padding: 10px;
+    border-radius: 100px;
+    background-color: var(--secondary-color);
+    transition: transform ease .25s;
+}
+
+.produto__icone:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.produto_thumb:not(.produto_thumb--reverso) .produto__icone{
+    margin-left: auto;
+}

@@ -11,6 +11,7 @@ import './assets/css/produto-thumb-preco-original.css';
 import './assets/css/produto-thumb-preco-final.css';
 import './assets/css/produto-link.css';
 import './assets/css/produto-thumb-buttons.css';
+import './assets/css/produto-icone.css'
 
 import { Link } from "react-router-dom";
 import Icones from "../Icones";
@@ -21,6 +22,11 @@ interface ProdutoProps {
 
 const ProdutoThumb = ({produto}: ProdutoProps)=> {
     produto.finalPrice = produto.price - (produto.price * produto.discountPercentage) / 100;
+    
+    function adicionaProdutoAosFavoritos(produto: Produto) {
+        
+    }
+
     return (<>
         <div className={`produto_thumb ${
             produto.id % 2 === 0 ? 'produto_thumb--reverso' : ''
@@ -31,6 +37,7 @@ const ProdutoThumb = ({produto}: ProdutoProps)=> {
                     tipo='coracao'
                     classe='produto__icone'
                     tamanho='25'
+                    onClick={adicionaProdutoAosFavoritos(produto)}
                 />
                 <h4 className="produto_thumb__titulo">{produto.title}</h4>
                 <p className="produto_thumb__descricao">{produto.description}</p>
