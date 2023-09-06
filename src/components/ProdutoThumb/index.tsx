@@ -11,11 +11,9 @@ import './assets/css/produto-thumb-preco-original.css';
 import './assets/css/produto-thumb-preco-final.css';
 import './assets/css/produto-link.css';
 import './assets/css/produto-thumb-buttons.css';
-import './assets/css/icones.css';
-
 
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Icones from "../Icones";
 
 interface ProdutoProps {
     produto: Produto
@@ -29,9 +27,11 @@ const ProdutoThumb = ({produto}: ProdutoProps)=> {
         }`}>
             <img className="produto_thumb__image" src={`${produto.images[0]}`} alt="" />
             <div className="produto_thumb__dados">
-                <span className="produto__favoritar">
-                    <span className="icone--coracao_vazio"></span>
-                </span>
+                <Icones 
+                    tipo='coracao'
+                    classe='produto__icone'
+                    tamanho='25'
+                />
                 <h4 className="produto_thumb__titulo">{produto.title}</h4>
                 <p className="produto_thumb__descricao">{produto.description}</p>
                 <p className="produto_thumb__preco_original"><s>{produto.price}</s></p>
