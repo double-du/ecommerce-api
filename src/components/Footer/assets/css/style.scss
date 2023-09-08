@@ -9,6 +9,23 @@
         background-color: var(--footer-bg-color);
         padding: 1.5rem;
     }
+    &__menu{
+        a{
+            color: #fff;
+            display: block;
+            padding: .25rem .5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color ease .15s;
+            &:hover{
+                background-color: var(--main-color);
+            }
+        }
+    }
+    &__devby{
+        text-align: center;
+        margin-bottom: 1rem;
+    }
     @media screen {
         @media (min-width: 998px) {
             &__main{

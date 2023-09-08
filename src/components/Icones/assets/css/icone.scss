@@ -3,12 +3,41 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    &--coracao{
+    display: block;
+    &__inline{
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 5px;
+    }
+    &[class*="icone--"]{
         content: '';
-        background-image: url('../img/coracao.svg');
         background-size: 80%;
         background-position: center center;
         background-repeat: no-repeat;
-        display: block;
+    }
+    
+    &--coracao{
+        background-image: url('../img/coracao.svg');
+    }
+    &--carrinho{
+        background-image: url('../img/carrinho.svg');
+        content: '';
+        background-size: 80%;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+    &--olho{
+        background-image: url('../img/olho.svg');   
+        content: '';
+        background-size: 80%;
+        background-position: center center;
+        background-repeat: no-repeat;  
+    }
+    &--coracao-preenchido{
+        background-image: url('../img/coracao-preenchido.svg');       
+        content: '';
+        background-size: 80%;
+        background-position: center center;
+        background-repeat: no-repeat;
     }
 }

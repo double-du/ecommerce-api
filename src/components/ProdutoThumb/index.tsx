@@ -4,6 +4,7 @@ import './assets/css/style.scss';
 
 import { Link } from "react-router-dom";
 import Icones from "../Icones";
+import { useEffect, useState } from "react";
 
 interface ProdutoProps {
     produto: Produto
@@ -11,6 +12,12 @@ interface ProdutoProps {
 
 const ProdutoThumb = ({produto}: ProdutoProps)=> {
     produto.finalPrice = produto.price - (produto.price * produto.discountPercentage) / 100;    
+
+    function adicionaProdutoAosFavoritos(id:number){
+        console.log();
+    }
+
+    const [favoritos, setFavoritos] = useState([]);
 
     return (<>
         <div className={`produto_thumb ${
@@ -22,15 +29,28 @@ const ProdutoThumb = ({produto}: ProdutoProps)=> {
                     tipo='coracao'
                     classe='produto__icone'
                     tamanho={25}
-                    // onClick={adicionaProdutoAosFavoritos(produto)}
                 />
                 <h4 className="produto_thumb__titulo">{produto.title}</h4>
                 <p className="produto_thumb__descricao">{produto.description}</p>
                 <p className="produto_thumb__preco_original"><s>{produto.price}</s></p>
                 <p className="produto_thumb__preco_final">{produto.finalPrice.toFixed(2)}</p>
                 <div className="produto_thumb__buttons">
-                    <Link to={`produto/${produto.id}`} className="produto__link produto__link--destaque">Adicionar ao Carrinho </Link>
-                    <Link to={`produto/${produto.id}`} className="produto__link">Ver Produto</Link>
+                    <Link to={`produto/${produto.id}`} className="produto__link produto__link--destaque">
+                        Adicionar ao Carrinho 
+                        <Icones
+                            tipo='carrinho'
+                            classe='icone__inline'
+                            tamanho={20}
+                        />                                                
+                    </Link>
+                    <Link to={`produto/${produto.id}`} className="produto__link">
+                        Ver Produto
+                        <Icones
+                            tipo='olho'
+                            classe='icone__inline'
+                            tamanho={20}
+                        />                                        
+                    </Link>
                 </div>
             </div>
         </div>
