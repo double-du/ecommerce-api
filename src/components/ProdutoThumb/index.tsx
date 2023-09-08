@@ -10,11 +10,7 @@ interface ProdutoProps {
 }
 
 const ProdutoThumb = ({produto}: ProdutoProps)=> {
-    produto.finalPrice = produto.price - (produto.price * produto.discountPercentage) / 100;
-    
-    function adicionaProdutoAosFavoritos(produto: Produto) {
-        
-    }
+    produto.finalPrice = produto.price - (produto.price * produto.discountPercentage) / 100;    
 
     return (<>
         <div className={`produto_thumb ${
@@ -25,8 +21,8 @@ const ProdutoThumb = ({produto}: ProdutoProps)=> {
                 <Icones 
                     tipo='coracao'
                     classe='produto__icone'
-                    tamanho='25'
-                    onClick={adicionaProdutoAosFavoritos(produto)}
+                    tamanho={25}
+                    // onClick={adicionaProdutoAosFavoritos(produto)}
                 />
                 <h4 className="produto_thumb__titulo">{produto.title}</h4>
                 <p className="produto_thumb__descricao">{produto.description}</p>
