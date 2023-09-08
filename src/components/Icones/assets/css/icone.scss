@@ -21,23 +21,11 @@
     }
     &--carrinho{
         background-image: url('../img/carrinho.svg');
-        content: '';
-        background-size: 80%;
-        background-position: center center;
-        background-repeat: no-repeat;
     }
     &--olho{
-        background-image: url('../img/olho.svg');   
-        content: '';
-        background-size: 80%;
-        background-position: center center;
-        background-repeat: no-repeat;  
+        background-image: url('../img/olho.svg');        
     }
     &--coracao-preenchido{
-        background-image: url('../img/coracao-preenchido.svg');       
-        content: '';
-        background-size: 80%;
-        background-position: center center;
-        background-repeat: no-repeat;
+        background-image: url('../img/coracao-preenchido.svg');               
     }
 }
