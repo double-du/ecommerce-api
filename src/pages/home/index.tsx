@@ -5,8 +5,7 @@ import axios from 'axios';
 import Produto from '../../interfaces/Produto';
 import ProdutoThumb from '../../components/ProdutoThumb';
 
-import './assets/css/produtos-lista.css'
-import './assets/css/produtos-titulo.css'
+import './assets/css/style.scss'
 
 const Home = () =>{
     const [produtos, setProdutos] = useState<Produto[]>([]);

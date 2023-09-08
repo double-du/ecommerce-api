@@ -1,0 +1,14 @@
+.icone{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &--coracao{
+        content: '';
+        background-image: url('../img/coracao.svg');
+        background-size: 80%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        display: block;
+    }
+}

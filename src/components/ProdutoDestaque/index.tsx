@@ -1,5 +1,5 @@
 import Produto from "../../interfaces/Produto";
-import './assets/css/destaque-card.css'
+import './assets/css/style.scss'
 interface ProdutoProps{
     produto: Produto
 }

@@ -1,4 +1,4 @@
-import './assets/css/icone.css';
+import './assets/css/icone.scss';
 
 export default function Icones (props: any) {
     return (<>

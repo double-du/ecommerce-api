@@ -1,7 +1,5 @@
 import Menu from "../Menu";
-import './assets/css/nav.css';
-import './assets/css/nav-logo.css';
-import './assets/css/nav-menu.css';
+import './assets/css/style.scss';
 const Header = () => {
     return (<>
         <nav className="nav">

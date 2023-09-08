@@ -1,8 +1,6 @@
 import Menu from "../Menu";
-import './assets/css/footer.css';
-import './assets/css/footer-main.css';
-import './assets/css/footer-menu.css';
-import './assets/css/footer-devby.css';
+import './assets/css/style.scss';
+
 const Footer = () => {
     return (<>
         <footer className="footer">

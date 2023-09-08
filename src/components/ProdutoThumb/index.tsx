@@ -1,17 +1,6 @@
 import Produto from "../../interfaces/Produto";
 
-import './assets/css/produto-thumb.css';
-import './assets/css/produto-thumb-image.css';
-import './assets/css/produto-thumb-favoritar.css';
-import './assets/css/produto-thumb-dados.css';
-import './assets/css/produto-thumb-descricao.css';
-import './assets/css/produto-thumb-titulo.css';
-import './assets/css/produto-thumb-preco.css';
-import './assets/css/produto-thumb-preco-original.css';
-import './assets/css/produto-thumb-preco-final.css';
-import './assets/css/produto-link.css';
-import './assets/css/produto-thumb-buttons.css';
-import './assets/css/produto-icone.css'
+import './assets/css/style.scss';
 
 import { Link } from "react-router-dom";
 import Icones from "../Icones";

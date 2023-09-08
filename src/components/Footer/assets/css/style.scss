@@ -1,0 +1,20 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    color: var(--footer-color);
+    background-color: var(--footer-bg-color);
+    &__main{
+        display: flex;
+        flex-direction: column;
+        background-color: var(--footer-bg-color);
+        padding: 1.5rem;
+    }
+    @media screen {
+        @media (min-width: 998px) {
+            &__main{
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+    }
+}
