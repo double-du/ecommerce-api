@@ -9,5 +9,6 @@ export default interface Produto {
     discountPercentage: number
     finalPrice: number
     thumbnail: string
+    favorito: boolean
     images: ProdutoImagem[]
 }

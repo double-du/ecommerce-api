@@ -11,13 +11,7 @@ interface ProdutoProps {
 }
 
 const ProdutoThumb = ({produto}: ProdutoProps)=> {
-    produto.finalPrice = produto.price - (produto.price * produto.discountPercentage) / 100;    
-
-    function adicionaProdutoAosFavoritos(id:number){
-        console.log();
-    }
-
-    const [favoritos, setFavoritos] = useState([]);
+    produto.finalPrice = produto.price - (produto.price * produto.discountPercentage) / 100;
 
     return (<>
         <div className={`produto_thumb ${
@@ -25,11 +19,11 @@ const ProdutoThumb = ({produto}: ProdutoProps)=> {
         }`}>
             <img className="produto_thumb__image" src={`${produto.images[0]}`} alt="" />
             <div className="produto_thumb__dados">
-                <Icones 
-                    tipo='coracao'
-                    classe='produto__icone'
-                    tamanho={25}
-                />
+                {
+                    produto.favorito ? 
+                        <Icones tipo='coracao_preenchido' classe='produto__icone produto__icone--selecionado' tamanho={25} /> : 
+                        <Icones tipo='coracao' classe='produto__icone' tamanho={25} /> 
+                }
                 <h4 className="produto_thumb__titulo">{produto.title}</h4>
                 <p className="produto_thumb__descricao">{produto.description}</p>
                 <p className="produto_thumb__preco_original"><s>{produto.price}</s></p>
