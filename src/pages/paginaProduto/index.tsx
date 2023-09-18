@@ -35,6 +35,11 @@ const PaginaProduto = () => {
         setImagemPrincipal(imagem);
     }
 
+    function retornaValorComDesconto(valorCheio: any, valorDoDesconto: any)
+    {
+        let valorComDesconto = valorCheio - ((valorCheio * valorDoDesconto) / 100);
+        return valorComDesconto.toFixed(2).replace('.',',');
+    }
     return (<>
         <div className="container">
             <div className="produto">
@@ -60,7 +65,8 @@ const PaginaProduto = () => {
                     <h1 className="produto__titulo">{produto?.title}</h1>
                     <span className="produto__marca">{produto?.brand}</span>
                     <p className="produto__descricao">{produto?.description}</p>
-                    <p className="produto__preco">{produto?.price}</p>
+                    <p className="produto__preco produto__preco--original"><s>{produto?.price}</s></p>
+                    <p className="produto__preco produto__preco--com_desconto">{retornaValorComDesconto(produto?.price, produto?.discountPercentage)}</p>
                 </div>
             </div>
         </div>
